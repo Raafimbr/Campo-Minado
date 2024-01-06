@@ -70,7 +70,7 @@ def imagensCriar():
     imagensNumeros = [imagemN1, imagemN2, imagemN3, imagemN4, imagemN5, imagemN6, imagemN7, imagemN8]
 
 def linguagem(lingua):
-    global txtDifi, txtDifi2, difiB, txtS, txtR, txtB, txtIB, txtV, txtD
+    global txtDifi, txtDifi2, difiB, txtS, txtR, txtB, txtIB, txtV, txtD, titulo
 
     txtDifi = 'Dificuldade' if lingua == 'Português' else 'Difficulty'
     txtDifi2 = 'Clique na dificuldade desejada:' if lingua == 'Português' else 'Click on the desired difficulty:'
@@ -81,6 +81,7 @@ def linguagem(lingua):
     txtIB = 'Info e botões' if lingua == 'Português' else 'Info and buttons'
     txtV = 'Você ganhou!' if lingua == 'Português' else 'You won!'
     txtD = 'Você perdeu!' if lingua == 'Português' else 'You lost!'
+    titulo = 'Campo Minado' if lingua == 'Português' else 'Minefield'
 
 lang = ''
 def configsIniciais():
@@ -133,7 +134,7 @@ def configsIniciais():
         # criar as imagens
         imagensCriar()
         # titulo da janela
-        janela.title('Campo Minado')
+        janela.title(titulo)
         # tamanho do botao
         tamanhoBotão = 35
         # x e y da janela
